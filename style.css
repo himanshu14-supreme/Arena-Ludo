@@ -1,0 +1,21 @@
+/* Add to the bottom of your existing style.css */
+
+.ludo-grid {
+    grid-template-columns: repeat(8, 1fr) !important; /* Wrap the track nicely */
+    background: rgba(0,0,0,0.2) !important;
+}
+
+#dice-display.shake {
+    animation: diceShake 0.3s ease-in-out;
+}
+
+@keyframes diceShake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#cell-0 { background: #334155; font-weight: bold; grid-column: span 2; } /* BASE */
+#cell-53 { background: var(--accent-gold); color: black; font-weight: bold; grid-column: span 2; box-shadow: 0 0 15px var(--accent-gold); } /* WIN */
